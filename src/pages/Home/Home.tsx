@@ -1,6 +1,6 @@
 //import Cart from "../../components/Cart/Cart"
 import { CartProvider } from "../../components/CartContext/CartContext"
-import Footer from "../../components/Footer/Footer"
+import Rodape from "../../components/Footer/Rodape"
 import Header from "../../components/Header/Header"
 import Menu from "../../components/Menu/Menu"
 
@@ -12,7 +12,7 @@ const Home = () => {
       <CartProvider>
         <Header />
         <Menu />
-        <Footer />
+        <Rodape />
       </CartProvider>
     </>
   )

@@ -1,30 +1,64 @@
 import React from 'react';
-import burguerHeader from "../../pages/assets/hamb-2.png";
+import Footer from "../../components/Footer/Footer"
+import theme from '../../theme';
+import { Container, Grid, styled } from "@mui/material";
+import Avatar from "../../pages/assets/tasty-hamburger-on-transparent-background-png.webp"
 
 const Header: React.FC = () => {
-  // Função para obter a cor com base no horário atual
-  const getColorBasedOnTime = () => {
-    const currentHour = new Date().getHours();
-    
-    // Verifica se o horário está fora do intervalo das 18:00 e 22:00
-    if (currentHour < 18 || currentHour > 22) {
-      return 'bg-red-500'; // Cor vermelha para horários fora do intervalo
-    } else {
-      return 'bg-green-500'; // Cor verde para horários dentro do intervalo
-    }
-  };
 
-  // Determina a classe do fundo com base na hora atual
-  const horarioClasse = getColorBasedOnTime();
+  const StyledHero = styled("div")(() => ({
+
+    height: "100vh",
+    display: "flex",
+    alignItems: "center",
+    [theme.breakpoints.up('xs')]: {
+        paddingBottom: "50px",
+    },
+    [theme.breakpoints.up('md')]: {
+        paddingBottom: "0px",
+    },
+
+}))
+
+const StyledImg = styled("img")(() => ({
+
+    borderRadius: "50%",
+    [theme.breakpoints.up('xs')]: {
+        width: "80%",
+    },
+    [theme.breakpoints.up('md')]: {
+        width: "100%",
+
+    },
+
+}))
 
   return (
-    <header className="h-[400px] w-full bg-zinc-900 bg-home bg-cover bg-center flex flex-col justify-center items-center">
-      <img src={burguerHeader} className="w-[180px] rounded-full mt-[-20px] mb-[20px]" />
-      <h1 className="text-white text-[30px] font-[600]">Red Burguer</h1>
-      <h3 className="text-white mb-3">Rua 15, Vale do Açai, Açailândia-MA</h3>
-      <h2 className={`text-white p-[8px] rounded-[5px] text-[18px] font-[600] ${horarioClasse}`} id="HorarioFuncionamento">
-        Seg á Dom - 18:00 às 22:00
-      </h2>
+    <header className="h-[100vh] w-full bg-orange-600 ">
+
+
+
+      <StyledHero>
+        <Container maxWidth="lg">
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={7}>
+            <h2 className=" font-[700] md:text-[33px] text-[15px] " >CHEGOU SUA VEZ DE EXPERIMENTAR O</h2>
+            <h1 className=" font-[600] md:text-[65px] text-[33px] text-white " style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.5)" }} >Maior e Melhor Hamburguer da Cidade!</h1>
+
+
+            </Grid>
+            <Grid item xs={12} md={5}>
+
+            <div className=" sm:mt-[-100px] mt-[-30px] "><StyledImg src={Avatar} /></div>
+
+
+            </Grid>
+          </Grid>
+        </Container>
+      </StyledHero>
+
+      <Footer />
+
     </header>
   );
 }
