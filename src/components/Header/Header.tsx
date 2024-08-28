@@ -11,6 +11,7 @@ const Header: React.FC = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    justifyContent: "center",
     [theme.breakpoints.up('xs')]: {
         paddingBottom: "50px",
     },
@@ -24,7 +25,8 @@ const StyledImg = styled("img")(() => ({
 
     borderRadius: "50%",
     [theme.breakpoints.up('xs')]: {
-        width: "80%",
+        width: "100%",
+        padding: "20px",
     },
     [theme.breakpoints.up('md')]: {
         width: "100%",
@@ -49,7 +51,7 @@ const StyledImg = styled("img")(() => ({
             </Grid>
             <Grid item xs={12} md={5}>
 
-            <div className=" sm:mt-[-100px] mt-[-30px] "><StyledImg src={Avatar} /></div>
+            <div className=" sm:mt-[-100px] mt-[-50px] "><StyledImg src={Avatar} /></div>
 
 
             </Grid>

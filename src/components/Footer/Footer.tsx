@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-      <footer className=" flex justify-center p-6  gap-1 text-[18px] text-black font-[600] fixed right-5 bottom-5 ">
+      <footer className=" flex justify-center p-3 pt-7 pb-7  gap-1 text-[18px] text-white font-[600] fixed right-5 bottom-5 rounded-full bg-orange-600 ">
         <button onClick={handleToggleCart} className="flex gap-1">
           (<div id="QuantidadesPedidos">{pedidos.length}</div>) <ShoppingCartIcon />
         </button>

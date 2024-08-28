@@ -90,7 +90,7 @@ const Cart: React.FC<CartProps> = ({ onClose }) => {
                                 value={pedido.quantidade}
                                 min="1"
                                 onChange={(e) => handleQuantidadeChange(pedido.id, e)}
-                                className="w-16 pl-2 pr-2 text-right font-[500] border-[2px] border-teal-500 bg-slate-200 rounded-lg"
+                                className=" w-10 sm:w-16 pl-2 pr-2 text-right font-[500] border-[2px] border-teal-500 bg-slate-200 rounded-lg"
                             />
                             <button onClick={() => removePedido(pedido.id)} className="ml-3 bg-red-500 p-2 m-1 rounded-lg text-white font-[500]">Remover</button>
                         </li>
